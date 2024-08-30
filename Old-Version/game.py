@@ -29,7 +29,7 @@ def check_input1(password):
 #main programs......
 print("Welcome........")
 name_user=input("Enter Your Name: \n  >>")
-print("Hello",name_user)
+print("Hello",name_user+"!")
 
 
 start=input("Enter 'S' to Start\n  >>")
