@@ -1,6 +1,6 @@
 
 def signUp():
-    print("----------SignUp-----------")
+    print("---------------SignUp-----------")
 
     set_name=input("Set player NickName: ")
 
@@ -26,21 +26,27 @@ def signUp():
 
 
 def login():
-    print("-------------Login-------------")
-    input_name=input("Enter Nickname: ")
-    input_password=input("Enter Password: ")
+    print("---------------Login-------------")
+    
 
     i=3
     while(i>=1):
+        input_name=input("\nEnter Nickname: ")
+        input_password=input("Enter Password: ")
         try:
             niknam=open(f"Latest-Version\kt\.hidden\{input_name}.ook","r")
             origina_password=niknam.read()
             if(origina_password==input_password):
 
                 return True,input_name
+            else:
+                print("<!><!>Password Incorrect!!")
+                print("<!><!>Try Again!!")
 
         except FileNotFoundError:
-            print("Autentication Failed\n invalid login Detail")
+            print("<!><!>Autentication Failed!!!\n<!><!>invalid login Detail!!!")
 
         i-=1
+
+    return False,None
     #----------------------------------------------------------------------
